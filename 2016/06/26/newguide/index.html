@@ -37,7 +37,7 @@
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/04dfd1edgw1f4yglfx9dej20hy06qacv.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/04dfd1edgw1f4yglg6axpj20hn053q3o.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/04dfd1edgw1f4yglgeajmj20hx04kmyj.jpg">
-<meta property="og:updated_time" content="2016-07-17T09:12:25.464Z">
+<meta property="og:updated_time" content="2016-07-17T09:39:12.518Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VPS做文件中转站进阶版！">
 <meta name="twitter:description" content="进阶大法！">
@@ -330,7 +330,7 @@
 </blockquote>
 <p>另：使用wget<a href="http://www.cnblogs.com/peida/archive/2013/03/18/2965369.html" target="_blank" rel="external">更多介绍</a>下载远程服务器上的文件：<br>下载单个文件:<code>wget --restrict-file-names=nocontrol &#39;URL&#39;</code><br><img src="http://ww2.sinaimg.cn/large/0060lm7Tgw1f5ci08thbtg30is0bugw6.gif" alt="wget下载远程文件"><br>另：下载整个目录(包括其子目录):<code>wget -c -r -np -L -k --restrict-file-names=nocontrol URL</code></p>
 <hr>
-<h2 id="BT下载软件deluge"><a href="#BT下载软件deluge" class="headerlink" title="BT下载软件deluge"></a>BT下载软件deluge</h2><p>在vps上使用BT下载是有风险的，首先确认你的vps在这方面的监管是否很严格，如果被删机器就划不来了。另外请合理使用资源！<br>安装deluge：<br><code>wget --no-check-certificate https://raw.githubusercontent.com/vps2me/vps2me/master/desetup.sh</code><br><code>chmod +x desetup.sh</code><br><code>./desetup.sh</code><br>安装结束之后在浏览器里打开<code>http://vps的IP地址:8112/</code>默认密码是deluge，首次登陆请修改一下。<br>选中host然后connect<br><img src="http://ww1.sinaimg.cn/large/04dfd1edgw1f5wwb6qaerj209a06pgm2.jpg" alt="连接"><br>一些简单的设置<br>下载路径(为了方便在浏览器里查看，下载到默认网页目录)：<br><img src="http://ww3.sinaimg.cn/large/04dfd1edgw1f5wwm4nqcij20e40emq4z.jpg" alt="下载路径"><br>关闭DHT<br><img src="http://ww2.sinaimg.cn/large/04dfd1edgw1f5wwm5h7gpj20da0drdh8.jpg" alt="关闭DHT"><br>限制上传速度<br><img src="http://ww4.sinaimg.cn/large/04dfd1edgw1f5wwm6tqg9j20dh0drwh6.jpg" alt="限制上传速度"><br>修改密码<br><img src="http://ww4.sinaimg.cn/large/04dfd1edgw1f5wwm7lnztj20ct0dudhu.jpg" alt="修改密码"><br>add添加任务，可以是种子或者磁力url<br>刚开始很慢，需要耐心等待一会</p>
+<h2 id="BT下载软件deluge"><a href="#BT下载软件deluge" class="headerlink" title="BT下载软件deluge"></a>BT下载软件deluge</h2><p>在vps上使用BT下载是有风险的，首先确认你的vps在这方面的监管是否很严格，如果被删机器就划不来了。另外请合理使用资源！<br>安装deluge：<br><code>wget --no-check-certificate https://raw.githubusercontent.com/vps2me/vps2me/master/desetup.sh</code><br><code>chmod +x desetup.sh</code><br><code>./desetup.sh</code><br>安装结束之后在浏览器里打开<code>http://vps的IP地址:8112/</code>默认密码是deluge，首次登陆请修改一下。<br>选中host然后connect<br><img src="http://ww1.sinaimg.cn/large/04dfd1edgw1f5wwb6qaerj209a06pgm2.jpg" alt="连接"><br>一些简单的设置<br>下载路径(为了方便在浏览器里查看，下载到默认网页目录)：<br><img src="http://ww3.sinaimg.cn/large/04dfd1edgw1f5wwm4nqcij20e40emq4z.jpg" alt="下载路径"><br>关闭DHT<br><img src="http://ww2.sinaimg.cn/large/04dfd1edgw1f5wwm5h7gpj20da0drdh8.jpg" alt="关闭DHT"><br>限制上传速度<br><img src="http://ww4.sinaimg.cn/large/04dfd1edgw1f5wwm6tqg9j20dh0drwh6.jpg" alt="限制上传速度"><br>修改密码<br><img src="http://ww4.sinaimg.cn/large/04dfd1edgw1f5wwm7lnztj20ct0dudhu.jpg" alt="修改密码"><br>add添加任务，可以是种子或者磁力url<br>刚开始很慢，需要耐心等待一会<br><em>注：如果重启vps之后打不开网页，登陆vps运行：<code>screen deluge-web</code></em></p>
 <hr>
 <h2 id="选项一-bpcs-uploader上传百度云"><a href="#选项一-bpcs-uploader上传百度云" class="headerlink" title="选项一 bpcs_uploader上传百度云"></a>选项一 bpcs_uploader上传百度云</h2><p>依次执行：<br><code>cd ~</code><br><code>unzip master</code><br><code>mv oott123-bpcs_uploader-3a75324 baidupan</code>注意中间一长串内容为上一步unzip master中对应的文件夹名称,不要弄错<br><code>cd baidupan</code><br>获取运行权限：<br><code>chmod +x bpcs_uploader.php</code><br>授权：<br><code>./bpcs_uploader.php quickinit</code><br><img src="http://ww3.sinaimg.cn/large/04dfd1edgw1f4ydw5o9caj20hz08z43f.jpg" alt="授权"><br>注意：复制图中红圈位置标出的授权码，每次授权都是不同的，图中为rqxtjqzk<br>浏览器打开网址：<a href="https://openapi.baidu.com/device" target="_blank" rel="external">https://openapi.baidu.com/device</a><br>输入你自己显示的授权码，网页显示”您已成功为bpcs_uploader授权！”之后回到putty，回车继续<br>授权成功显示：Access Granted. Your Storage Status: 1791.33G/2056.00G (87.13%)Enjoy!</p>
 <blockquote>
@@ -358,7 +358,7 @@
 </blockquote>
 <p>由于api权限原因，bypy只能存取百度云盘-&gt;我的应用数据-&gt;bypy目录下面的文件和目录<br>把当前目录同步到云盘(包括子目录内所有文件):<br>首先cd到需要上传文件的目录内:<br><code>cd /var/www/html</code><br>再执行:<br><code>bypy -v syncup</code>或<code>bypy -v upload</code><br>比较本地当前目录和云盘（程序的）根目录（个人认为非常有用）：<br><code>bypy compare</code></p>
 <hr>
-<h2 id="直接下载"><a href="#直接下载" class="headerlink" title="直接下载"></a>直接下载</h2><p>在浏览器打开你的ip地址，可以使用迅雷或者IDM把vps里的文件直接拖回到本地，同时支持在线播放！</p>
+<h2 id="直接下载"><a href="#直接下载" class="headerlink" title="直接下载"></a>直接下载</h2><p>在浏览器打开你的ip地址，可以使用迅雷或者IDM把vps里的文件直接拖回到本地，同时支持在线播放！<br><em>注：如果打不开网页可以在vps里运行：<code>/etc/init.d/apache2 restart</code></em></p>
 <hr>
 <h2 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h2><p>待续：vsftpd</p>
 <hr>
@@ -384,7 +384,7 @@
         <p><span>本文标题:</span><a href="/2016/06/26/newguide/">VPS做文件中转站进阶版！</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">kpop fan</a></p>
         <p><span>发布时间:</span>2016-06-26, 22:54:02</p>
-        <p><span>最后更新:</span>2016-07-17, 17:12:25</p>
+        <p><span>最后更新:</span>2016-07-17, 17:39:12</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/06/26/newguide/" title="VPS做文件中转站进阶版！">http://vps2me.github.io/2016/06/26/newguide/</a>
             <span class="copy-path" data-clipboard-text="原文: http://vps2me.github.io/2016/06/26/newguide/　　作者: kpop fan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
