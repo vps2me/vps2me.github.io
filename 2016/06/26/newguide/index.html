@@ -37,7 +37,7 @@
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/04dfd1edgw1f4yglfx9dej20hy06qacv.jpg">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/04dfd1edgw1f4yglg6axpj20hn053q3o.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/04dfd1edgw1f4yglgeajmj20hx04kmyj.jpg">
-<meta property="og:updated_time" content="2016-07-17T07:07:08.627Z">
+<meta property="og:updated_time" content="2016-07-17T09:12:25.464Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VPS做文件中转站进阶版！">
 <meta name="twitter:description" content="进阶大法！">
@@ -352,9 +352,9 @@
 <p>上传文件：<br><code>pcs u &lt;local file&gt; &lt;remote file&gt;</code><br>解释：<br>local file：格式为本地路径/文件名.后缀 注意文件名的引号<br>remote file：格式为百度盘路径/文件名.后缀 注意文件名的引号<br><img src="http://ww2.sinaimg.cn/large/0060lm7Tgw1f5chrdc5heg30i70bfgw6.gif" alt="PCS上传单个文件"></p>
 <p>查看百度盘容量：<code>pcs quota</code><br>退出账号：<code>pcs logout</code></p>
 <hr>
-<h2 id="选项三-bypy上传百度云"><a href="#选项三-bypy上传百度云" class="headerlink" title="选项三 bypy上传百度云"></a>选项三 bypy上传百度云</h2><p>首先安装bypy<br><code>pip3 install requests bypy</code><br>bypy的<a href="https://github.com/houtianze/bypy#基本操作" target="_blank" rel="external">项目主页介绍</a></p>
+<h2 id="选项三-bypy上传百度云"><a href="#选项三-bypy上传百度云" class="headerlink" title="选项三 bypy上传百度云"></a>选项三 bypy上传百度云</h2><p>首先安装bypy<br><code>pip3 install requests</code><br><code>pip3 install bypy</code><br><code>pip3 install -U requests</code><br>bypy的<a href="https://github.com/houtianze/bypy#基本操作" target="_blank" rel="external">项目主页介绍</a></p>
 <blockquote>
-<p>第一次运行时需要授权,随便一个命令：<br><code>bypy info</code><br>用浏览器打开提示中的链接：<br><img src="http://ww2.sinaimg.cn/large/04dfd1edgw1f4yglfx9dej20hy06qacv.jpg" alt="bypy授权1"><br>复制授权码:<br><img src="http://ww1.sinaimg.cn/large/04dfd1edgw1f4yglg6axpj20hn053q3o.jpg" alt="bypy授权2"><br>将授权码粘贴到窗口，按回车完成授权！：<br><img src="http://ww2.sinaimg.cn/large/04dfd1edgw1f4yglgeajmj20hx04kmyj.jpg" alt="bypy授权3"><br>(如果有红色警告信息，一般解决方法都会在提示中，如图上使用<code>pip3 install -U requests</code>解决)</p>
+<p>第一次运行时需要授权,随便一个命令：<br><code>bypy info</code><br>用浏览器打开提示中的链接：<br><img src="http://ww2.sinaimg.cn/large/04dfd1edgw1f4yglfx9dej20hy06qacv.jpg" alt="bypy授权1"><br>复制授权码:<br><img src="http://ww1.sinaimg.cn/large/04dfd1edgw1f4yglg6axpj20hn053q3o.jpg" alt="bypy授权2"><br>将授权码粘贴到窗口，按回车完成授权！：<br><img src="http://ww2.sinaimg.cn/large/04dfd1edgw1f4yglgeajmj20hx04kmyj.jpg" alt="bypy授权3"></p>
 </blockquote>
 <p>由于api权限原因，bypy只能存取百度云盘-&gt;我的应用数据-&gt;bypy目录下面的文件和目录<br>把当前目录同步到云盘(包括子目录内所有文件):<br>首先cd到需要上传文件的目录内:<br><code>cd /var/www/html</code><br>再执行:<br><code>bypy -v syncup</code>或<code>bypy -v upload</code><br>比较本地当前目录和云盘（程序的）根目录（个人认为非常有用）：<br><code>bypy compare</code></p>
 <hr>
@@ -384,7 +384,7 @@
         <p><span>本文标题:</span><a href="/2016/06/26/newguide/">VPS做文件中转站进阶版！</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">kpop fan</a></p>
         <p><span>发布时间:</span>2016-06-26, 22:54:02</p>
-        <p><span>最后更新:</span>2016-07-17, 15:07:08</p>
+        <p><span>最后更新:</span>2016-07-17, 17:12:25</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/06/26/newguide/" title="VPS做文件中转站进阶版！">http://vps2me.github.io/2016/06/26/newguide/</a>
             <span class="copy-path" data-clipboard-text="原文: http://vps2me.github.io/2016/06/26/newguide/　　作者: kpop fan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
