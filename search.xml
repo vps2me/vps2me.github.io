@@ -28,7 +28,7 @@
 <p><a href="http://www.cnblogs.com/peida/archive/2012/10/24/2736501.html" target="_blank" rel="external">目录切换cd</a>—–<a href="http://www.cnblogs.com/peida/archive/2012/10/23/2734829.html" target="_blank" rel="external">ls命令介绍</a>—–<a href="http://www.cnblogs.com/peida/archive/2012/10/26/2740521.html" target="_blank" rel="external">rm命令介绍</a></p>
 </blockquote>
 <hr>
-<h2 id="下载方法"><a href="#下载方法" class="headerlink" title="下载方法"></a>下载方法</h2><p>首先安装youtube-dl，you-get：<br><code>pip3 install youtube-dl you-get</code><br><strong>进入我们存放文件的目录/var/www/html</strong><br><code>cd /var/www/html</code><br>主要介绍下载youtube的方法，其他网站(如naver、youku等请点击更多介绍<br>使用youtube-dl，可以查找本站教程或者<a href="https://github.com/rg3/youtube-dl" target="_blank" rel="external">官网</a>：<br><code>youtube-dl -f bestvideo[ext=mp4]+bestaudio[ext=m4a] -o &#39;%(title)s&#39; --all-subs -i URL1 URL2 URL3</code><br><img src="http://ww3.sinaimg.cn/large/0060lm7Tgw1f5ch2k9equg30is0bugw6.gif" alt="youtube-dl下载"></p>
+<h2 id="下载方法"><a href="#下载方法" class="headerlink" title="下载方法"></a>下载方法</h2><p>首先安装youtube-dl，you-get：<br><code>pip3 install youtube-dl you-get</code><br><strong>进入我们存放文件的目录/var/www/html</strong><br><code>cd /var/www/html</code><br>主要介绍下载youtube的方法，其他网站(如naver、youku等请点击更多介绍<br>使用youtube-dl，可以查找本站教程或者<a href="https://github.com/rg3/youtube-dl" target="_blank" rel="external">官网</a>：<br><code>youtube-dl -f bestvideo[ext=mp4]+bestaudio[ext=m4a] -o &#39;%(title)s&#39; --all-subs -i URL1 URL2 URL3</code><br>也可以在电脑上新建一个比如list.txt的文档，里面的youtube链接用换行隔开，用filezilla上传到vps中，使用<code>-a list.txt</code>来读取并下载txt里的链接：<br><code>youtube-dl -f bestvideo[ext=mp4]+bestaudio[ext=m4a] -o &#39;%(title)s&#39; --all-subs -i -a list.txt</code><br><img src="http://ww3.sinaimg.cn/large/0060lm7Tgw1f5ch2k9equg30is0bugw6.gif" alt="youtube-dl下载"></p>
 <p>使用you-get<a href="https://github.com/soimort/you-get/wiki/%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E" target="_blank" rel="external">详细中文介绍</a>：<br><code>you-get --itag=266 URL1 URL2 URL3</code><br>–itag=266：266是选择视频格式代码，最好在下载前先使用<code>you-get -i URL</code>查看可下载的格式<br><img src="http://ww1.sinaimg.cn/large/0060lm7Tgw1f5cgm7oahrg30is0bujw6.gif" alt="you-get下载"></p>
 <p>由于目前you-get的格式选择功能比较弱，所以大量下载还是推荐youtube-dl</p>
 <blockquote>
@@ -253,7 +253,9 @@
 <p><em>另外还有一个等待超时命令：<code>--socket-timeout SECONDS</code>，SECONDS替换成秒数，表示在多少秒内没有数据传送就跳过此链接。</em></p>
 <hr>
 <h3 id="write-thumbnail下载缩略图"><a href="#write-thumbnail下载缩略图" class="headerlink" title="--write-thumbnail下载缩略图"></a><code>--write-thumbnail</code>下载缩略图</h3><hr>
-<h3 id="write-sub下载外挂字幕（如果有）"><a href="#write-sub下载外挂字幕（如果有）" class="headerlink" title="--write-sub下载外挂字幕（如果有）"></a><code>--write-sub</code>下载外挂字幕（如果有）</h3><h2 id="加入选项-all-subs"><a href="#加入选项-all-subs" class="headerlink" title="加入选项--all-subs"></a>加入选项<code>--all-subs</code></h2><h3 id="add-metadata写入元数据"><a href="#add-metadata写入元数据" class="headerlink" title="--add-metadata写入元数据"></a><code>--add-metadata</code>写入元数据</h3><hr>
+<h3 id="write-sub下载外挂字幕（如果有）"><a href="#write-sub下载外挂字幕（如果有）" class="headerlink" title="--write-sub下载外挂字幕（如果有）"></a><code>--write-sub</code>下载外挂字幕（如果有）</h3><p>加入选项<code>--all-subs</code></p>
+<hr>
+<h3 id="add-metadata写入元数据"><a href="#add-metadata写入元数据" class="headerlink" title="--add-metadata写入元数据"></a><code>--add-metadata</code>写入元数据</h3><hr>
 <h2 id="其他说明"><a href="#其他说明" class="headerlink" title="其他说明"></a>其他说明</h2><p> youtube-dl支持断点续传，在批量下载中还会自动跳过已经下好的视频（没有移动它们或手动改名），所以如果下载过程中有错误的话，再执行一遍相同的命令就等于是校验下载了。</p>
 <p> 多开几个cmd窗口即可多个任务同时进行，个人感觉没什么意义，每次我用youtube-dl都可以单线达到最大带宽速度，下载速度取决于你的FQ速度。</p>
 <p> 一些官方的实例：</p>
